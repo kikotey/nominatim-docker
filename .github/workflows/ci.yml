@@ -219,5 +219,5 @@ jobs:
           docker buildx build --platform linux/amd64,linux/arm64 --push \
             -t ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_IMAGE_NAME }}:latest \
             -t ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_IMAGE_NAME }}:${{ matrix.nominatim.version }} \
-            -t ${{ secrets.DOCKER_USERNAME }}/${{secret.DOCKER_IMAGE_NAME }}:${{ matrix.nominatim.version }}-${{ github.sha }} .
+            -t ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_IMAGE_NAME }}:${{ matrix.nominatim.version }}-${{ github.sha }} .
         working-directory: ${{ matrix.nominatim.version }}
